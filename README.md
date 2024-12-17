@@ -1,4 +1,7 @@
-# address-validation
+<div align="center">
+  <h1>Address Validation</h1>
+  <p>During my internship, my first task was to develop an address validation component that accepts a name, phone number, and address.</p>
+</div>
 
 ## Project setup
 ```
