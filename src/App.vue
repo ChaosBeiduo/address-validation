@@ -1,17 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>Address Validation 🕵️‍♂️</h1>
+  <AddressParser ref="addressParser" @info-parsed="handleParsedAddress"/>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import AddressParser from './components/AddressParser.vue'
+import {ref} from "vue";
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+const addressParser = ref(null);
+const errorMessage = ref('');
+
+
+function handleParsedAddress(result) {
+  errorMessage.value = '';
+
+  if (!result){
+    errorMessage.value = "地址为空";
   }
+
+  console.log(result)
+
 }
+
 </script>
 
 <style>
